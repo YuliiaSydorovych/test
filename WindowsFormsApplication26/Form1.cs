@@ -8,17 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using System.Configuration;
 
 namespace WindowsFormsApplication26
 {
     public partial class Form1 : Form
     {
         TestDb db;
+         
         public Form1()
         {
            
             InitializeComponent();
             db = new TestDb();
+            Admin defoltAdmin = new Admin();     //Створюю 
+            defoltAdmin.Login = "Admin";        //дефолтного 
+            defoltAdmin.Password = "Admin";    //юзера (Адміна)
+            if (db.Admins.Any(Admin => Admin.Login == "Admin"))//Перевірка на унікальність логіна Admin
+            {
+
+            }
+            else
+            {
+                db.Admins.Add(defoltAdmin);//Якщо нема то добавляю в БД
+                db.SaveChanges();
+            }
             //db.Questions.Load();
             //dataGridView1.DataSource = db.Questions.Local.ToBindingList();
         }
@@ -27,7 +41,7 @@ namespace WindowsFormsApplication26
         {
             Test test = new Test();
 
-            test.NameTest = "Yuliia";
+            test.NameTest = "Volodia";
 
             db.Tests.Add(test);
 
@@ -38,6 +52,11 @@ namespace WindowsFormsApplication26
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void створитиТестToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
         }
     }
 }

@@ -39,12 +39,21 @@ namespace WindowsFormsApplication26
         public bool TrueAnswer { get; set; }
     }
 
+    public class Admin
+    {
+        public int ID { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+
+    }
     public class TestDb : DbContext
     {
-        public TestDb() : base("TestDb")
+        public TestDb() : base("TestDb2")//Юля Для тебе TestDb // TestDb2 це для мене.
         { }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }
         public DbSet<Test> Tests { get; set; }
+
+        public DbSet<Admin> Admins { get; set; }
     }
 }
