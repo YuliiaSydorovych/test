@@ -58,5 +58,18 @@ namespace WindowsFormsApplication26
         {
             panel1.Visible = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var order = db.Admins.Where(Admin => Admin.Login == textBox1.Text && Admin.Password==textBox2.Text).FirstOrDefault();//Перевірка чи є такий логін та пароль в базі данних
+            if (order!=null)
+            {
+                MessageBox.Show("Entering..");//Вірний логін та пароль
+            }
+            else
+            {
+                MessageBox.Show("Wrong Login or Password");//Не вірний
+            }
+        }
     }
 }
