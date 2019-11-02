@@ -48,7 +48,7 @@ namespace WindowsFormsApplication26
     }
     public class TestDb : DbContext
     {
-        public TestDb() : base("TestDb2")//Юля Для тебе TestDb // TestDb2 це для мене.
+        public TestDb() : base("TestDb")//Юля Для тебе TestDb // TestDb2 це для мене.
         { }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }

@@ -56,7 +56,8 @@ namespace WindowsFormsApplication26
 
         private void створитиТестToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,6 +71,54 @@ namespace WindowsFormsApplication26
             {
                 MessageBox.Show("Wrong Login or Password");//Не вірний
             }
+        }
+
+        private void створитиТестToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Test test = new Test();
+            //Question question = new Question();
+            //Answer answer = new Answer();
+
+            //TeacherPageCreateTest create = new TeacherPageCreateTest();
+
+            //DialogResult result = create.ShowDialog(this);
+
+            //if (result == DialogResult.Cancel)
+            //    return;
+
+            //AddNewQuestion add = new AddNewQuestion();
+
+            //int index = create.dataGridView1.SelectedRows[0].Index;
+
+            //int id = 0;
+
+            //bool converted = Int32.TryParse(create.dataGridView1[0, index].Value.ToString(), out id);
+
+            //if (converted == false)
+            //    return;
+
+            //test.NameTest = add.textBox1.Text;
+            //test.ID = index;
+
+            //question.NameQuestion = add.textBox2.Text;
+            //question.IDTest = test.ID;
+
+            //answer.IDQuestion = 
+
+
+
+
+            //question.IDTest = index;
+            //question.NameQuestion = add.textBox4.Text;
+            
+            //db.SaveChanges();
+
+            MessageBox.Show("It's ok");
         }
     }
 }
